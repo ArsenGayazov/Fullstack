@@ -9,3 +9,4 @@ function dump ($var) {
     var_dump($var);
     echo '</pre>';
 }
+
