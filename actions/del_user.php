@@ -1,6 +1,6 @@
 <?php
 
-$userTd = $_POST['id'];
+$userId = $_POST['id'];
 
 $user = 'root'; $password = '';
 $pdo = new Pdo('mysql:dbname=fullstack;host=127.0.0.1', $user, $password);
@@ -11,4 +11,4 @@ $res->execute([
     ':id' => $userId, 
 ]);
 
-header("Location: ../index.php");
+header('Location: ../index.php');
