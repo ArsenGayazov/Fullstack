@@ -24,4 +24,4 @@ foreach ($links as $key => $link) {
 }
 echo '</div>';
 
-?>
+require_once '../../templates/footer.php';
