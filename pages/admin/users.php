@@ -21,15 +21,15 @@ echo "
             <th></th>
         </tr>
     </thead>
-    <tbody>        
+    <tbody>
 ";
 
 foreach ($users as $user) {
-//   if ($user['city_id']){ 
-//        $city = $user ['city_id'];
-//    } else {
-//        $city = '-';         
-//    }        это полностью соответсвтвует той строчке что ниже. сокращение
+    // if ($user['city_id']) {
+    //     $city = $user['city_id'];
+    // } else {
+    //     $city = '-';
+    // }
 
     $city = $user['city_id'] ? $user['city_id'] : '-';
 
@@ -40,13 +40,13 @@ foreach ($users as $user) {
             <td>
                 <a href='pages/user.php?id={$user['id']}'>
                     {$user['name']}
-                </a>    
+                </a>
             </td>
-            <td>$city</td>
+            <td>{$city}</td>
             <td class='text-center'>
                 <form method='post' action='actions/del_user.php'>
                     <input type='hidden' name='id' value='{$user['id']}'>
-                    <button type='submit' class ='btn btn-danger'>x</button>
+                    <button type='submit' class='btn btn-user-delete btn-danger'>x</button>
                 </form>
             </td>
         </tr>
